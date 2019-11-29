@@ -64,7 +64,7 @@ char *mx_del_extra_spaces(const char *str);
 char **mx_strsplit(const char *s, char c);
 char *mx_strjoin(const char *s1, const char *s2);
 char *mx_file_to_str(const char *file);
-int mx_read_line(char **lineptr, int buf_size, char delim, const int fd);
+int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd);
 char *mx_replace_substr(const char *str, const char *sub, const char *replace);
 bool mx_isspace(char c);
 bool mx_isalpha(char c);

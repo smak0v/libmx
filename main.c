@@ -3,16 +3,31 @@
 #include <stdio.h>
 
 int main() {
+    // MX_READ_LINE
+
+
+    // MX_MEMCCPY
+
+
+    // MX_PRINT_STRARR
+    // char *arr[] = {"S", "m", "a", "k", "o", "v", NULL};
+    // mx_print_strarr(arr, " ");
+
     // MX_QUICKSORT
-    char *arr1[] = {"Michelangelo", "Donatello", "Leonardo", "Raphael"};
-    printf("%d\n", mx_quicksort(arr1, 0, 3));
-    for (int i = 0; i < 4; i++)
-        mx_printstr_endl(arr1[i]);
-    printf("\n");
-    char *arr2[] = {"DMC", "Clint Eastwood", "Dr Brown", "Einstein", "Jessica", "Beef Tannen"};
-    printf("%d\n", mx_quicksort(arr2, 0, 5));
-    for (int i = 0; i < 6; i++)
-        mx_printstr_endl(arr2[i]);
+    // char *arr1[] = {"Michelangelo", "Donatello", "Leonardo", "Raphael"};
+    // printf("%d\n", mx_quicksort(arr1, 0, 3));
+    // for (int i = 0; i < 4; i++)
+    //     mx_printstr_endl(arr1[i]);
+    // printf("\n");
+    // char *arr2[] = {"DMC", "Clint Eastwood", "Dr Brown", "Einstein", "Jessica", "Beef Tannen"};
+    // printf("%d\n", mx_quicksort(arr2, 0, 5));
+    // for (int i = 0; i < 6; i++)
+    //     mx_printstr_endl(arr2[i]);
+    // printf("\n");
+    // char *arr3[] = {"a", "b", "x", "z", "r", "f", "q", "p", "o"};
+    // printf("%d\n", mx_quicksort(arr3, 0, 8));
+    // for (int i = 0; i < 9; i++)
+    //     mx_printstr_endl(arr3[i]);
 
     // MX_STRNDUP
     // char *str = "sos";
