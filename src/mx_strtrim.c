@@ -1,13 +1,13 @@
 #include "libmx.h"
 
 char *mx_strtrim(const char *str) {
-	char *trimmed_str;
+	char *trimmed_str = NULL;
 	int start_spaces_count = 0;
 	int end_spaces_count = 0;
 	int i = 0;
 	int size = 0;
 
-	if (str == NULL)
+	if (!str)
 		return NULL;
 	while (mx_isspace(str[i++]))
 		start_spaces_count++;

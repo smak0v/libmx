@@ -3,7 +3,7 @@
 char *mx_strjoin(const char *s1, const char *s2) {
 	char *result = NULL;
 
-	if (!s1 && !s2)
+	if ((!s1) && (!s2))
 		return NULL;
 	if (!s1)
 		return mx_strdup(s2);

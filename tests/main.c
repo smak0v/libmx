@@ -1,13 +1,51 @@
-#include "inc/libmx.h"
+#include "../inc/libmx.h"
 
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    // MX_READ_LINE
-
-
     // MX_MEMCCPY
+    
 
+    // MX_READ_LINE
+    // char *s = NULL;
+    // int fd_1 = open("test_1.txt", O_RDONLY);
+    // printf("%d:%s\n", mx_read_line(&s, 20, 'f', fd_1), s);
+    // mx_strdel(&s);
+    // printf("%d:%s\n", mx_read_line(&s, 35, 't', fd_1), s);
+    // mx_strdel(&s);
+    // printf("%d:%s\n", mx_read_line(&s, 4, '.', fd_1), s);
+    // mx_strdel(&s);
+
+    // printf("\n");
+
+    // int fd_2 = open("test_2.txt", O_RDONLY);
+    // int res = 0;
+    // char *str = NULL;
+    // while ((res = mx_read_line(&str, 20, 'f', fd_2)) > -1) {
+    //     printf("%d:%s\n", res, str);
+    //     mx_strdel(&str);
+    // }
+
+    // printf("\n");
+
+    // int fd_3 = open("test_3.txt", O_RDONLY);
+    // int r = 0;
+    // char *st = NULL;
+    // while ((r = mx_read_line(&st, 128, '\n', fd_3)) > -1) {
+    //     printf("%d:%s\n", r, st);
+    //     mx_strdel(&st);
+    // }
+
+    // printf("\n");
+
+    // int fd_4 = open("test_4.txt", O_RDONLY);
+    // int rt = 0;
+    // char *sty = NULL;
+    // while ((rt = mx_read_line(&sty, 128, 'f', fd_4)) > -1) {
+    //     printf("%d:%s\n", rt, sty);
+    //     mx_strdel(&sty);
+    // }
 
     // MX_PRINT_STRARR
     // char *arr[] = {"S", "m", "a", "k", "o", "v", NULL};
