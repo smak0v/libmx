@@ -1,17 +1,17 @@
 #ifndef LIBMX_H
 #define LIBMX_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <wchar.h>
 #include <fcntl.h>
 #include <malloc/malloc.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <wchar.h>
 
 // Structures
-typedef struct  s_list {
-	void  *data;
-	struct s_list *next;
+typedef struct s_list {
+    void *data;
+    struct s_list *next;
 } t_list;
 
 // Utils pack
@@ -75,16 +75,18 @@ bool mx_isupper(char c);
 // Memory pack
 void *mx_memset(void *b, int c, size_t len);
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
-void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void *mx_memccpy(void *restrict dst, const void *restrict src, int c,
+                 size_t n);
 int mx_memcmp(const void *s1, const void *s2, size_t n);
 void *mx_memchr(const void *s, int c, size_t n);
 void *mx_memrchr(const void *s, int c, size_t n);
-void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
+void *mx_memmem(const void *big, size_t big_len, const void *little,
+                size_t little_len);
 void *mx_memmove(void *dst, const void *src, size_t len);
 void *mx_realloc(void *ptr, size_t size);
 
 // List pack
-t_list  *mx_create_node(void *data);
+t_list *mx_create_node(void *data);
 void mx_push_front(t_list **list, void *data);
 void mx_push_back(t_list **list, void *data);
 void mx_pop_front(t_list **head);

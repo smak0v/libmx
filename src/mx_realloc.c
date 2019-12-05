@@ -7,11 +7,11 @@ static void copy_data(void *ptr, void *new_ptr);
 void *mx_realloc(void *ptr, size_t size) {
     void *result = NULL;
 
-    if ((!size && ptr) || (!size && !ptr)) {
+    if (((!size) && (ptr)) || ((!size) && (!ptr))) {
         free_ptr(ptr);
         return malloc(0);
     }
-    if (size && !ptr)
+    if ((size) && (!ptr))
         return malloc(size);
     result = malloc(size);
     if (!result)

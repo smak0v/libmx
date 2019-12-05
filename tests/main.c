@@ -4,8 +4,67 @@
 #include <string.h>
 
 int main() {
+    // MX_SQRT
+    // printf("%d\n", mx_sqrt(-245));
+    // printf("%d\n", mx_sqrt(-293232));
+    // printf("%d\n", mx_sqrt(1));
+    // printf("%d\n", mx_sqrt(0));
+    // printf("%d\n", mx_sqrt(22));
+    // printf("%d\n", mx_sqrt(4));
+    // printf("%d\n", mx_sqrt(64));
+
+    // MX_COUNT_WORDS
+    // printf("%d\n", mx_count_words("  follow  *   the  white rabbit ", '*'));
+    // printf("%d\n", mx_count_words("  follow  *   the  white rabbit ", ' '));
+    // printf("%d\n", mx_count_words(NULL, ' '));
+
+    // MX_BUBBLE_SORT
+    // char *arr1[] = {"abc", "xyz", "ghi", "def"};
+    // printf("%d\n", mx_bubble_sort(arr1, 4));
+    // char *arr2[] = {"abc", "acb", "a"};
+    // printf("%d\n", mx_bubble_sort(arr2, 3));
+
+    // MX_BINARY_SEARCH
+    // int count = 0;
+    // char *arr[] = {"222", "Abcd", "aBc", "ab", "az", "z"};
+    // printf("%d-%d\n", mx_binary_search(arr, 6, "ab", &count), count);
+    // printf("%d-%d\n", mx_binary_search(arr, 6, "aBc", &count), count);
+    // printf("%d-%d\n", mx_binary_search(arr, 6, "abdc", &count), count);
+
+    // MX_ATOI
+    // printf("%d\n", mx_atoi("21a"));
+    // printf("%d\n", mx_atoi("a12s"));
+    // printf("%d\n", mx_atoi("21"));
+    // printf("%d\n", mx_atoi(" 21"));
+    // printf("%d\n", mx_atoi("-5a"));
+    // printf("%d\n", mx_atoi("-a5s"));
+
+    // MX_MEMMEM
+    // printf("%s\n", mx_memmem("Big big string", 14, "big", 3));
+
     // MX_MEMCCPY
-    
+    // char *dst1 = mx_strnew(20);
+    // char *dst1_c = dst1;
+    // printf("%s-%s\n", mx_memccpy(dst1, "Sergey", 'g', 10), dst1_c);
+    // char *dst2 = malloc(20);
+    // char *dst2_c = dst2;
+    // printf("%s-%s\n", mx_memccpy(dst2, "SSSSSsSSSS", 's', 10), dst2_c);
+
+    // MX_REPLACE_SUBSTR
+    // printf("%s\n", mx_replace_substr("McDonalds", "alds", "uts"));
+    // printf("%s\n", mx_replace_substr("Ururu turu", "ru", "ta"));
+    // printf("%s\n", mx_replace_substr("mamama", "mama", "papa"));
+    // printf("%s\n", mx_replace_substr("mmmmmmmm", "mmm", "ppp"));
+
+    // MX_COUNT_SUBSTR
+    // printf("%d\n", mx_count_substr("yo, yo, yo Neo", "yo"));
+    // printf("%d\n", mx_count_substr("StrStrStr", "Str"));
+    // printf("%d\n", mx_count_substr("mamama", "mama"));
+    // printf("%d\n", mx_count_substr("mamamama", "mama"));
+    // printf("%d\n", mx_count_substr("mamama", NULL));
+    // printf("%d\n", mx_count_substr(NULL, "mama"));
+    // printf("%d\n", mx_count_substr(NULL, NULL));
+    // printf("%d\n", mx_count_substr("mmmmmmmm", "mmm"));
 
     // MX_READ_LINE
     // char *s = NULL;
