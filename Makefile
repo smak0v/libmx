@@ -34,6 +34,7 @@ mx_printint_endl.c \
 mx_printstr.c \
 mx_printstr_endl.c \
 mx_print_error.c \
+mx_print_error_endl.c \
 mx_quicksort.c \
 mx_sqrt.c \
 mx_str_reverse.c \
@@ -108,6 +109,7 @@ src/mx_printint_endl.c \
 src/mx_printstr.c \
 src/mx_printstr_endl.c \
 src/mx_print_error.c \
+src/mx_print_error_endl.c \
 src/mx_quicksort.c \
 src/mx_sqrt.c \
 src/mx_str_reverse.c \
@@ -182,6 +184,7 @@ mx_printint_endl.o \
 mx_printstr.o \
 mx_printstr_endl.o \
 mx_print_error.o \
+mx_print_error_endl.o \
 mx_quicksort.o \
 mx_sqrt.o \
 mx_str_reverse.o \

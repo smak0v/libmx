@@ -21,6 +21,7 @@ void mx_print_unicode(wchar_t c);
 void mx_printstr(const char *s);
 void mx_printstr_endl(const char *s);
 void mx_print_error(const char *error);
+void mx_print_error_endl(const char *error);
 void mx_print_strarr(char **arr, const char *delim);
 void mx_printint(int n);
 void mx_printint_endl(int n);
