@@ -4,6 +4,22 @@
 #include <string.h>
 
 int main() {
+    //MX_TOLOWER
+    // printf("%c\n", mx_tolower('a'));
+    // printf("%c\n", mx_tolower('b'));
+    // printf("%c\n", mx_tolower('z'));
+    // printf("%c\n", mx_tolower('A'));
+    // printf("%c\n", mx_tolower('B'));
+    // printf("%c\n", mx_tolower('Z'));
+
+    // MX_TOUPPER
+    // printf("%c\n", mx_toupper('a'));
+    // printf("%c\n", mx_toupper('b'));
+    // printf("%c\n", mx_toupper('z'));
+    // printf("%c\n", mx_toupper('A'));
+    // printf("%c\n", mx_toupper('B'));
+    // printf("%c\n", mx_toupper('Z'));
+
     // MX_SQRT
     // printf("%d\n", mx_sqrt(-245));
     // printf("%d\n", mx_sqrt(-293232));

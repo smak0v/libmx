@@ -20,6 +20,8 @@ mx_isalpha.c \
 mx_islower.c \
 mx_isupper.c \
 mx_isdigit.c \
+mx_toupper.c \
+mx_tolower.c \
 mx_itoa.c \
 mx_atoi.c \
 mx_ctoi.c \
@@ -95,6 +97,8 @@ src/mx_isalpha.c \
 src/mx_islower.c \
 src/mx_isupper.c \
 src/mx_isdigit.c \
+src/mx_toupper.c \
+src/mx_tolower.c \
 src/mx_itoa.c \
 src/mx_atoi.c \
 src/mx_ctoi.c \
@@ -170,6 +174,8 @@ mx_isalpha.o \
 mx_islower.o \
 mx_isupper.o \
 mx_isdigit.o \
+mx_toupper.o \
+mx_tolower.o \
 mx_itoa.o \
 mx_atoi.o \
 mx_ctoi.o \
