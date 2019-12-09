@@ -25,7 +25,7 @@ int main() {
     // printf("%d\n", mx_sqrt(-293232));
     // printf("%d\n", mx_sqrt(1));
     // printf("%d\n", mx_sqrt(0));
-    // printf("%d\n", mx_sqrt(22));
+    // printf("%d\n", mx_sqrt(9));
     // printf("%d\n", mx_sqrt(4));
     // printf("%d\n", mx_sqrt(64));
 
