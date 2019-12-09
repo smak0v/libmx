@@ -105,3 +105,7 @@ typedef struct s_list {
 |```mx_sort_list```|Sorts the list’s contents in ascending order.|
 |```mx_revers_list```|Reverses all node`s links in the list.|
 |```mx_is_equal_lists```|Compare two lists by it`s data.|
+
+## License
+
+Collision is an open-sourced software licensed under the [MIT license](LICENSE.md).
