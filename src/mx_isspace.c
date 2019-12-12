@@ -6,7 +6,8 @@ bool mx_isspace(char c) {
         || (c == '\v') 
         || (c == '\f')
         || (c == '\r')
-        || (c == ' '))
+        || (c == ' ')) {
         return true;
+    }
     return false;
 }

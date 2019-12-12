@@ -10,7 +10,8 @@ void mx_pop_back(t_list **head) {
         free(*head);
         *head = NULL;
         return;
-    } else {
+    }
+    else {
         p = *head;
         while (p->next->next)
             p = p->next;

@@ -9,7 +9,8 @@ void mx_pop_front(t_list **head) {
         free(*head);
         *head = NULL;
         return;
-    } else {
+    }
+    else {
         p = (*head)->next;
         (*head)->data = NULL;
         free(*head); 
