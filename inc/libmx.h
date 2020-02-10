@@ -1,5 +1,4 @@
-#ifndef LIBMX_H
-#define LIBMX_H
+#pragma once
 
 #include <fcntl.h>
 #include <malloc/malloc.h>
@@ -30,6 +29,8 @@ int mx_sqrt(int x);
 char *mx_nbr_to_hex(unsigned long nbr);
 unsigned long mx_hex_to_nbr(const char *hex);
 char *mx_itoa(int number);
+char *mx_lltoa(long long value);
+char *mx_ulltoa(unsigned long long value);
 int mx_atoi(const char *str);
 int mx_ctoi(char c);
 void mx_foreach(int *arr, int size, void (*f)(int));
@@ -40,12 +41,17 @@ int mx_get_arr_length(char **arr);
 void mx_del_intarr(int ***array, int length);
 void mx_intdel(int **arr);
 int mx_get_file_length(const char *file);
+int mx_count_unequal(char **arr);
+int mx_strarr_len(char **strarr);
+int mx_numlen(long long value);
+int mx_unumlen(unsigned long long value);
 
 // String pack
 int mx_strlen(const char *s);
 void mx_swap_char(char *s1, char *s2);
 void mx_str_reverse(char *s);
 void mx_strdel(char **str);
+char **mx_pop_string_array(char **arr, char *value);
 void mx_del_strarr(char ***arr);
 int mx_get_char_index(const char *str, char c);
 char *mx_strdup(const char *s1);
@@ -87,16 +93,22 @@ void *mx_memmem(const void *big, size_t big_len, const void *little,
                 size_t little_len);
 void *mx_memmove(void *dst, const void *src, size_t len);
 void *mx_realloc(void *ptr, size_t size);
+void *mx_memalloc(size_t size);
 
 // List pack
 t_list *mx_create_node(void *data);
 void mx_push_front(t_list **list, void *data);
+void mx_push_second(t_list **list, void *data);
 void mx_push_back(t_list **list, void *data);
 void mx_pop_front(t_list **head);
 void mx_pop_back(t_list **head);
 int mx_list_size(t_list *list);
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
+t_list *mx_list_insertion_sort(t_list *list, bool (*cmp)(void *a, void *b));
+void mx_list_merge_sort(t_list **head_ptr, bool (*cmp)(void *a, void *b));
 void mx_revers_list(t_list **list);
 bool mx_is_equal_lists(t_list *a, t_list *b);
 
-#endif
+// Set pack
+bool mx_check_set(char **set, char *element, int set_size);
+char **mx_create_set(char **arr);

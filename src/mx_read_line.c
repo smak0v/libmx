@@ -1,8 +1,29 @@
 #include "libmx.h"
 
-static int copy_before_delim(char **ptr, int delim, char **rem, int fd);
-static int copy_end(char **lineptr, int fd, char **rem);
-static void set_rem(char **rem, int fd, char *buffer, int count);
+static void set_rem(char **rem, int fd, char *buffer, int count) {
+    char *tmp = NULL;
+
+    buffer[count] = '\0';
+    tmp = mx_strjoin(rem[fd], buffer);
+    mx_strdel(&rem[fd]);
+    rem[fd] = tmp;
+}
+
+static int copy_before_delim(char **ptr, int delim, char **rem, int fd) {
+    char *tmp = NULL;
+
+    *ptr = mx_strndup(rem[fd], delim);
+    tmp = mx_strdup(rem[fd] + delim + 1);
+    mx_strdel(&rem[fd]);
+    rem[fd] = tmp;
+    return delim;
+}
+
+static int copy_end(char **lineptr, int fd, char **rem) {
+    *lineptr = mx_strdup(rem[fd]);
+    mx_strdel(&rem[fd]);
+    return -1;
+}
 
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
     static char *rem[255];
@@ -25,27 +46,4 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
             return copy_end(lineptr, fd, rem);
     }
     return (count == -1) ? -2 : copy_before_delim(lineptr, index, rem, fd);
-}
-
-static void set_rem(char **rem, int fd, char *buffer, int count) {
-    buffer[count] = '\0';
-    char *tmp = mx_strjoin(rem[fd], buffer);
-    mx_strdel(&rem[fd]);
-    rem[fd] = tmp;
-}
-
-static int copy_before_delim(char **ptr, int delim, char **rem, int fd) {
-    char *tmp = NULL;
-
-    *ptr = mx_strndup(rem[fd], delim);
-    tmp = mx_strdup(rem[fd] + delim + 1);
-    mx_strdel(&rem[fd]);
-    rem[fd] = tmp;
-    return delim;
-}
-
-static int copy_end(char **lineptr, int fd, char **rem) {
-    *lineptr = mx_strdup(rem[fd]);
-    mx_strdel(&rem[fd]);
-    return -1;
 }

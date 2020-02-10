@@ -1,16 +1,11 @@
 #include "libmx.h"
 
-static int get_number_length(int number);
-
 char *mx_itoa(int number) {
-    int length = get_number_length(number);
+    int length = mx_numlen(number);
     char *str_integer = NULL;
 
     if ((number != 0) && (number != -2147483648)) {
-        if (number < 0)
-            str_integer = mx_strnew(length + 1);
-        else
-            str_integer = mx_strnew(length);
+        str_integer = mx_strnew(length);
         for (int i = 0; i < length; i++) {
             if (number < 0) {
                 str_integer[length] = '-';
@@ -23,15 +18,4 @@ char *mx_itoa(int number) {
         return str_integer;
     }
     return (number == 0) ? mx_strdup("0") : mx_strdup("-2147483648");
-}
-
-static int get_number_length(int number) {
-    int length = 0;
-    int copy_number = number;
-
-    while (copy_number) {
-        length++;
-        copy_number /= 10;
-    }
-    return length;
 }

@@ -23,16 +23,22 @@
 |```mx_nbr_to_hex```|Converts an unsigned long number into a hexadecimal.|
 |```mx_hex_to_nbr```|Converts a hexadecimal string into an unsigned long number.|
 |```mx_itoa```|Converts integer to a string.|
+|```mx_lltoa```|Converts long long integer to a string.|
+|```mx_ulltoa```|Converts unsigned long long integer to a string.|
 |```mx_atoi```|Converts string to integer.|
 |```mx_ctoi```|Concerts char to integer.|
 |```mx_foreach```|Applies the function ```f``` for each element of the array with the given size.|
 |```mx_binary_search```|Searches string in array with the given size using binary search algorithm.|
 |```mx_bubble_sort```|Sorts an array of strings in place in lexicographical order using bubble sort algorithm.|
 |```mx_quicksort```|Sorts an array of strings by their length in ascending order using algorithm of quick sort.|
-|```mx_get_arr_length```|Returns length of the NULL-terminated array of strings.|
+|```mx_get_arr_length```|Returns length of the ```NULL```-terminated array of strings without ```NULL```-element.|
 |```mx_del_intarr```|Takes pointer to 2D array of integers, deletes content of array, frees array memory and sets pointer to ```NULL```.|
 |```mx_intdel```|Takes pointer to an array of integers, deletes content of array, frees array memory and sets pointer to ```NULL```.|
 |```mx_get_file_length```|Returns file length in bytes.|
+|```mx_count_unequal```|Returns unequal elements count in array of strings.|
+|```mx_strarr_len```|Returns length of the ```NULL```-terminated array of strings with ```NULL```-element.|
+|```mx_numlen```|Returns length of long long integer number.|
+|```mx_unumlen```|Returns length of unsigned long long integer number.|
 
 ## String pack
 
@@ -41,7 +47,7 @@
 |```mx_strlen```|Has the same behaviour as standard libc function ```strlen```.|
 |```mx_swap_char```|Swap the characters of the string using pointers.|
 |```mx_str_reverse```|Reverses string using pointers.|
-|```mx_strdel```|Takes a pointer to string, then frees the string memory and sets string to NULL.|
+|```mx_strdel```|Takes a pointer to string, then frees the string memory and sets string to ```NULL```.|
 |```mx_del_strarr```|Takes pointer to a ```NULL```-terminated array of strings, deletes content of array, frees array memory with free and sets pointer to ```NULL``` .|
 |```mx_get_char_index```|Finds index of the first occurrence of character in a string.|
 |```mx_strdup```|Has the same behaviour as standard libc function ```strdup```.|
@@ -70,6 +76,7 @@
 |```mx_isupper```|Has the same behaviour as standard libc function ```isupper```.|
 |```mx_toupper```|Has the same behaviour as standard libc function ```toupper```.|
 |```mx_tolower```|Has the same behaviour as standard libc function ```tolower```.|
+|```mx_pop_string_array```|Pop value from array of strings.|
 
 ## Memory pack
 |Function name|Description|
@@ -83,6 +90,7 @@
 |```mx_memmem```|Has the same behaviour as standard libc function ```memmem```.|
 |```mx_memmove```|Has the same behaviour as standard libc function ```memmove```.|
 |```mx_realloc```|Has the same behaviour as standard stdlib function ```realloc```.|
+|```mx_memalloc```|Has the same behaviour as standard stdlib function ```malloc``` but set each element to ```NULL``` or ```0```.|
 
 ## List pack
 
@@ -98,13 +106,22 @@ typedef struct s_list {
 |-------------|-----------------------------------------|
 |```mx_create_node```|Creates a new node of linked list.|
 |```mx_push_front```|Inserts a new node of ```t_list``` type with the given parameter ```data``` at the beginning of the linked list.|
+|```mx_push_second```|Inserts a new node of ```t_list``` type with the given parameter ```data``` in the second position of the linked list.|
 |```mx_push_back```|Inserts a new node of ```t_list``` type with the given parameter ```data``` at the end of the linked list.|
 |```mx_pop_front```|Removes the first node of the linked list and frees allocated for the node memory.|
 |```mx_pop_back```|Removes the last node of the linked list and frees allocated for the node memory.|
 |```mx_list_size```|Calculates the number of nodes in the linked list.|
-|```mx_sort_list```|Sorts the list’s contents in ascending order.|
+|```mx_sort_list```|Sorts the list’s contents using comparator.|
+```mx_list_insertion_sort```|Sorts the list’s contents using comparator and insertion sort algorithm.|
+|```mx_list_merge_sort```|Sorts the list’s contents using comparator and megre sort algorithm.|
 |```mx_revers_list```|Reverses all node`s links in the list.|
 |```mx_is_equal_lists```|Compare two lists by it`s data.|
+
+## Set pack
+|Function name|Description|
+|-------------|----------------------------------------------------------------------------|
+|```mx_create_set```|Create a new array of strings with unequl elements from another array.|
+|```mx_check_set```|Check if set consists string element.|
 
 ## License
 
